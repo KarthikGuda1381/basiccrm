@@ -1,6 +1,7 @@
 
 import 'dart:async';
 
+import 'package:flutter_basics/TokenStorage.dart';
 import 'package:flutter_basics/constants/authStatus.dart';
 import 'package:flutter_basics/login/model/login.dart';
 import 'package:flutter_basics/login/repository/login_repository.dart';
@@ -16,7 +17,7 @@ class LoginNotifierProvider extends StateNotifier<LoginState>{
 
   Future<void> initialize() async {
     try{
-      final token = await ref.read(tokenStorageProvider).getToken();
+      final token = await ref.read(tokenStorageProvider)!.getToken();
       state = token == null ? LoginState.unauthenticated() : LoginState.authenticated();
     }catch(e){
       state = LoginState.unauthenticated();

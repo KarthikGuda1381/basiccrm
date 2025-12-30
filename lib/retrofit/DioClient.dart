@@ -4,11 +4,6 @@ import 'package:flutter_basics/retrofit/AuthInterceptor.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 
-// Token Storage Provider
-final tokenStorageProvider = Provider<Tokenstorage>((ref){
-  return Tokenstorage();
-});
-
 
 // Dio Provider
 final dioProvider = Provider<Dio>((ref){

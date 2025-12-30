@@ -21,7 +21,7 @@ class Tokenstorage {
   }
 }
 
-final tokenStorageProvider = Provider<Tokenstorage?>((ref){
+final tokenStorageProvider = Provider<Tokenstorage>((ref){
   return Tokenstorage();
 });
 
